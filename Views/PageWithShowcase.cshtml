@@ -1,0 +1,16 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.PageWithShowcase>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+	 Layout = "_Layout.cshtml"; 
+	ViewData["Title"] =  @Model.Value("title");
+}
+
+<!-- header -->
+<header>
+    <img class="background-lines" src="images/background-effects/background-lines.svg" alt="no images">
+    @await Html.PartialAsync("_NavSelection")
+    @await Html.PartialAsync("_ShowcaseSection")
+  
+    
+</header>
